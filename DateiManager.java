@@ -3,6 +3,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class DateiManager{
+
   public void verarbeiteDatei(String art, int schluessel, int a, int b, int m, String klartext, String geheimtext){
 
 
@@ -11,7 +12,7 @@ public class DateiManager{
 
       FileOutputStream output = new FileOutputStream(bestimmeOutputDatei(art, klartext, geheimtext));
 
-      Kodierung kodierung = new Kodierung(a, b, m, schluessel);
+       Kodierung kodierung = new Kodierung(a, b, m, schluessel);
 
       int byteValue;
       while ((byteValue = input.read()) != -1) {
@@ -27,6 +28,7 @@ public class DateiManager{
       System.out.println("Fehler beim Verarbeiten der Datei: " + e.getMessage());
     }
   }
+
   private String bestimmeInputDatei(String art, String klartext, String geheimtext){
     String inputDatei;
     if (art.equals("Chiffrierung")){
