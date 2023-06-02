@@ -67,25 +67,25 @@ public class DateiManager{
 		return inputDatei;
     
 	}
-  /**
-   * Bestimmt den Dateinamen der Ausgabedatei basierend auf dem Modus und den angegebenen Dateipfaden.
-   * @param art Der Modus der Verarbeitung (Chiffrierung oder Dechiffrierung).
-   * @param klartext Der Pfad zur Eingabedatei im Chiffrierungsmodus.
-   * @param geheimtext Der Pfad zur Eingabedatei im Dechiffrierungsmodus.
-   * @return Der Dateiname der Ausgabedatei.
-   */
+	/**
+	 * Bestimmt den Dateinamen der Ausgabedatei basierend auf dem Modus und den angegebenen Dateipfaden.
+	 * @param art Der Modus der Verarbeitung (Chiffrierung oder Dechiffrierung).
+	 * @param klartext Der Pfad zur Eingabedatei im Chiffrierungsmodus.
+	 * @param geheimtext Der Pfad zur Eingabedatei im Dechiffrierungsmodus.
+	 * @return Der Dateiname der Ausgabedatei.
+	 */
 	private String bestimmeOutputDatei(String art, String klartext, String geheimtext){
-    String outputDatei;
-    if(art.equals("Chiffrierung")){
-      outputDatei = geheimtext;
-    }
-    else if(art.equals("Dechiffrierung")){
-      outputDatei = klartext;
-    }
-    else{
-      throw new IllegalArgumentException("Nur {Chiffrierung/Dechiffrierung} möglich.");
-    }
-    return outputDatei;
+	    String outputDatei;
+	    if(art.equals("Chiffrierung")){
+	      outputDatei = geheimtext;
+	    }
+	    else if(art.equals("Dechiffrierung")){
+	      outputDatei = klartext;
+	    }
+	    else{
+	      throw new IllegalArgumentException("Nur {Chiffrierung/Dechiffrierung} möglich.");
+	    }
+	    return outputDatei;
 
 	}
 }
