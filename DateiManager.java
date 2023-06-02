@@ -10,7 +10,7 @@ import java.io.IOException;
  * und schreibt das Ergebnis in eine Ausgabedatei.
  */
 public class DateiManager{
-    /**
+    	/**
 	 * Verarbeitet eine Datei basierend auf dem angegebenen Modus,
 	 * Schlüssel und den Parametern für die VerschluesselungsSequenz.
 	 * @param art Der Modus der Verarbeitung (Chiffrierung oder Dechiffrierung).
